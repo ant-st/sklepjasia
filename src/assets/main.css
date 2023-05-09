@@ -1,0 +1,43 @@
+@import './base.css';
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  grid-template-rows: 100%;
+  grid-template-areas: 'banner store';
+}
+
+button {
+  background: none;
+  border: 2px solid #407700;
+  color: #ebebeb;
+  border-radius: 10px;
+  transition: border 0.3s linear;
+}
+
+button:hover {
+  border-color: #ebebeb;
+}
+
+@media screen and (max-width: 1000px) {
+  #app {
+    grid-template-columns: 25% 1fr;
+  }
+  @media screen and (max-width: 650px) {
+    #app {
+      grid-template-columns: 1fr;
+      grid-template-rows: 120px 1fr;
+      grid-template-areas: 'banner' 'store';
+    }
+  }
+}
+
+
+
